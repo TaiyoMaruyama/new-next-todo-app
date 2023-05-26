@@ -1,20 +1,19 @@
-import { Todo, User } from "@/pages";
+import { Todo, User, getTodoInfo, getUserInfo } from "@/pages";
 import { Button } from "@mui/material";
 import styles from "../../styles/todoList.module.css";
 import { useEffect, useState } from "react";
+import { useRecoilValue } from "recoil";
 
-const TodoList: React.FC<{ todos: Todo[]; users: User[] }> = ({
-  todos,
-  users,
-}: {
-  todos: Todo[];
-  users: User[];
-}) => {
+const TodoList: React.FC = () => {
   const [myTodos, setMyTodos] = useState<Todo[]>([]);
+  const todos = useRecoilValue(getTodoInfo);
+  const users = useRecoilValue(getUserInfo);
 
+  // セッションのあるユーザーのTODOだけ表示するようにFilterをかける
   useEffect(() => {
     const filteredTodos = todos.filter((myTodo) => myTodo.userId == 1);
     setMyTodos(filteredTodos);
+    console.log(users);
   }, []);
 
   return (
