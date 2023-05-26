@@ -1,0 +1,55 @@
+.header {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.myTodosList {
+  margin: 0 auto;
+  background-color: rgb(232, 232, 255);
+  border-radius: 8px;
+  width: 800px;
+  padding: 20px;
+}
+
+/* Listのカラム名 */
+.myTodosColumn {
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+}
+
+.myTodosTitle {
+  width: 480px;
+}
+
+.myTodosCreated,
+.myTodosProgress {
+  width: 140px;
+}
+
+.myTodosLine {
+  width: 780px;
+  margin: 0 auto;
+}
+
+/* listの中の行 */
+.myTodoColumn {
+  display: flex;
+  font-weight: bold;
+  margin: 10px 0;
+}
+.myTodoTitle {
+  width: 480px;
+}
+
+.myTodoCreated,
+.myTodoProgress {
+  width: 140px;
+  text-align: center;
+}
+
+.myTodoLine {
+  width: 750px;
+  margin: 0 auto;
+}
