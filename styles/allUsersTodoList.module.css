@@ -4,7 +4,7 @@
   margin: 20px;
 }
 
-.myTodosList {
+.everyoneTodosList {
   margin: 0 auto;
   background-color: rgb(232, 232, 255);
   border-radius: 8px;
@@ -13,19 +13,19 @@
 }
 
 /* Listのカラム名 */
-.myTodosColumn {
+.everyoneTodosColumn {
   display: flex;
   text-align: center;
   font-weight: bold;
 }
 
-.myTodosTitle {
+.everyoneTodosTitle {
   width: 440px;
 }
 
-.myTodosCreated,
-.myTodosProgress,
-.myTodosAction {
+.everyoneTodosCreated,
+.everyoneTodosProgress,
+.everyoneTodosCreator {
   width: 120px;
 }
 

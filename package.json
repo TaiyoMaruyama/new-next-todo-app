@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev:prisma-studio": "prisma studio",
-    "dev:server": "nodemon ./getData/getData.js",
+    "dev:server": "nodemon ./server/server.js",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -20,6 +20,7 @@
     "@types/react": "18.2.7",
     "@types/react-dom": "18.2.4",
     "axios": "^1.4.0",
+    "cors": "^2.8.5",
     "eslint": "8.41.0",
     "eslint-config-next": "13.4.3",
     "express": "^4.18.2",
