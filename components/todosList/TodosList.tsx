@@ -1,10 +1,13 @@
-import { Todo, User, getTodoInfo, getUserInfo } from "@/pages";
+import { Todo, getTodoInfo, getUserInfo } from "@/pages";
 import { Button } from "@mui/material";
 import styles from "../../styles/todoList.module.css";
 import { useEffect, useState } from "react";
 import { useRecoilValue } from "recoil";
+import { useRouter } from "next/router";
+import axios from "axios";
 
 const TodoList: React.FC = () => {
+  const router = useRouter();
   const [myTodos, setMyTodos] = useState<Todo[]>([]);
   const todos = useRecoilValue(getTodoInfo);
   const users = useRecoilValue(getUserInfo);
@@ -13,7 +16,6 @@ const TodoList: React.FC = () => {
   useEffect(() => {
     const filteredTodos = todos.filter((myTodo) => myTodo.userId == 1);
     setMyTodos(filteredTodos);
-    console.log(users);
   }, []);
 
   return (
@@ -22,10 +24,18 @@ const TodoList: React.FC = () => {
       <div className={styles.header}>
         <h1 className="h1">My Todos</h1>
         <div className={styles.headerButton}>
-          <Button variant="contained" sx={{ ml: 6, mt: 0.5 }}>
+          <Button
+            variant="contained"
+            sx={{ ml: 6, mt: 0.5 }}
+            onClick={() => router.push("/create")}
+          >
             新規作成
           </Button>
-          <Button variant="contained" sx={{ ml: 6, mt: 0.5 }}>
+          <Button
+            variant="contained"
+            sx={{ ml: 6, mt: 0.5 }}
+            onClick={() => router.push("/overall")}
+          >
             一覧表示
           </Button>
         </div>

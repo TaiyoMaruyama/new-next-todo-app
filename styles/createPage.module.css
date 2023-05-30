@@ -1,0 +1,29 @@
+.createForm {
+  margin: 0 auto;
+  background-color: rgb(232, 232, 255);
+  border-radius: 8px;
+  width: 800px;
+  margin-top: 120px;
+  padding-bottom: 30px;
+}
+
+.input {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+}
+
+.inputForm {
+  width: 500px;
+  padding: 10px;
+}
+
+.buttonFrame {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 200px;
+}
+
+.button {
+  width: 160px;
+}
